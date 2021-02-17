@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Gutta4:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Gutta4_jar</output-path>
+    <root id="archive" name="Gutta4.jar">
+      <element id="module-output" name="Gutta4" />
+    </root>
+  </artifact>
+</component>
