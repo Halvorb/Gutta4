@@ -1,3 +1,5 @@
+import jdk.swing.interop.SwingInterOpUtils;
+
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
@@ -8,19 +10,32 @@ public class KeyInput extends KeyAdapter {
         this.handler = handler;
     }
 
+/*
     public void KeyPressed(KeyEvent e) {
         int key = e.getKeyCode();
-
+        System.out.println("kukk");
         for (int i = 0; i < handler.object.size(); i++) {
             GameObject tempObject = handler.object.get(i);
+            System.out.println(handler.object.get(i));
             if (tempObject.getId() == ID.Guttebass) {
-                if(key == KeyEvent.VK_W) handler.setUp(true);
-                if(key == KeyEvent.VK_S) handler.setDown(true);
-                if(key == KeyEvent.VK_A) handler.setLeft(true);
-                if(key == KeyEvent.VK_D) handler.setRight(true);
+                if(key == KeyEvent.VK_W) {
+                    handler.setUp(true);
+                    System.out.println("up");
+                }
+                if(key == KeyEvent.VK_S) {
+                    handler.setDown(true);
+                    System.out.println("down");
+                }
+                if(key == KeyEvent.VK_A) {
+                    handler.setLeft(true);
+                    System.out.println("left");
+                }
+                if(key == KeyEvent.VK_D) {
+                    handler.setRight(true);
+                    System.out.println("right");
+                }
             }
         }
-
     }
 
     public void KeyReleased(KeyEvent e) {
@@ -35,4 +50,6 @@ public class KeyInput extends KeyAdapter {
             }
         }
     }
+    */
+
 }

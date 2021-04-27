@@ -12,12 +12,13 @@ public class Game extends Canvas implements Runnable{
         start();
 
         handler = new Handler();
-        this.addKeyListener(new KeyInput(handler));
-        handler.addObject(new Gutt(100, 100, ID.Guttebass, handler));
-
+//        this.addKeyListener(new KeyInput(handler));
+        handler.addObject(new Gutt(50, 50, ID.Gutt, handler));
+        //handler.addObject(new ValgtGutt(100, 100, ID.Guttebass, handler));
 
 
     }
+
 
     public void start() {
         isRunning = true;
@@ -30,7 +31,9 @@ public class Game extends Canvas implements Runnable{
 
         try {
             thread.join();
-        }catch(InterruptedException e) { e.printStackTrace();}
+        }catch(InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     // Gameloop fra minecraft!
@@ -56,7 +59,6 @@ public class Game extends Canvas implements Runnable{
                 timer += 1000;
                 frames = 0;
             }
-
         }
         stop();
     }
@@ -73,6 +75,7 @@ public class Game extends Canvas implements Runnable{
         }
 
         Graphics g = bs.getDrawGraphics();
+
         ////////////////////////////////////////////
 
         g.setColor(Color.darkGray);

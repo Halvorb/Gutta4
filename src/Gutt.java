@@ -1,5 +1,5 @@
 import java.awt.*;
-import java.awt.geom.RoundRectangle2D;
+
 
 public class Gutt extends GameObject {
 
@@ -8,6 +8,8 @@ public class Gutt extends GameObject {
     public Gutt(int x, int y, ID id, Handler handler) {
         super(x, y, id);
         this.handler = handler;
+
+        velX = 1;
     }
 
     public void tick() {
@@ -22,15 +24,15 @@ public class Gutt extends GameObject {
         else if(!handler.isUp()) velY = 0;
 
         if(handler.isRight()) velX = 5;
-        else if(!handler.isRight()) velX = 0;
+        else if(!handler.isLeft()) velX = 0;
 
         if(handler.isLeft()) velX = -5;
-        else if(!handler.isLeft()) velX = 0;
+        else if(!handler.isRight()) velX = 0;
 
     }
 
     public void render(Graphics g) {
-        g.setColor(Color.pink);
+        g.setColor(Color.blue);
         g.fillRoundRect(x, y, 20, 20, 20, 20);
     }
 

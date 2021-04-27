@@ -3,12 +3,11 @@ import java.util.LinkedList;
 
 public class Handler {
 
-    LinkedList<GameObject> object = new LinkedList<GameObject>();
+    LinkedList<GameObject> object = new LinkedList<>();
     private boolean up = false, down = false, right = false, left = false;
 
     public void tick() {
-        for (int i = 0; i < object.size(); i++) {
-            GameObject tempObject = object.get(i);
+        for (GameObject tempObject : object) {
             tempObject.tick();
 
         }
@@ -16,12 +15,12 @@ public class Handler {
 
 
     public void render(Graphics g) {
-        for (int i = 0; i < object.size(); i++) {
-            GameObject tempObject = object.get(i);
+        for (GameObject tempObject : object) {
             tempObject.render(g);
 
         }
     }
+
 
     public void addObject(GameObject tempObject) {
         object.add(tempObject);
